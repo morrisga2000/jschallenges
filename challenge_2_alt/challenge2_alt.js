@@ -38,9 +38,7 @@ var numOfHitsTeam2 = 0;
  var x = 0;
 var y = 0;
 
-    var audio = $("audio")[0];
-    audio.play(); 
-
+ 
 //$(document).ready(function(){
  $("#teamone-shoot").click(function(){
      numOfShotsTeam1++;
@@ -50,7 +48,8 @@ var y = 0;
 		numOfHitsTeam1 += Math.round(x);
 		if (Math.round(x)== 1) {
 			     $("#teamone-numhits").text(numOfHitsTeam1);
-			     $("body").css("background-color", "lightgray");
+			     jQuery('#main-background').css('opacity', '0.6');
+			     $("body").css("background-color", "green");
 			 }
 });
 //});
@@ -63,6 +62,7 @@ var y = 0;
      	 numOfHitsTeam2 += Math.round(y);
 		if (Math.round(y)== 1) {
 				 $("#teamtwo-numhits").text(numOfHitsTeam2);
+				  jQuery('#main-background').css('opacity', '0.6');
 			     $("body").css("background-color", "red");
 			 }
 
@@ -86,7 +86,9 @@ var y = 0;
 
 							});
 
-
+/*
+   var audio = $("audio")[0];
+    audio.play(); 
 
 
     $(document).ready(function() {
@@ -108,8 +110,7 @@ var y = 0;
         $('.pause').click(function() {
             audioElement.pause();
         });
-    }); 
-
+    }); */
  //});
 
  //$(function(){
